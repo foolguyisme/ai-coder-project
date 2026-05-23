@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+pip_tmp/
+models/
+sandbox_eval/test_cases/temp/
+.vscode/
+.DS_Store
+Thumbs.db
