@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  sandbox:
+    image: python:3.11-slim
+    working_dir: /workspace
+    volumes:
+      - ./test_cases:/workspace/test_cases:ro
+      - ./judge_runner.py:/workspace/judge_runner.py:ro
+    command: ["python", "/workspace/judge_runner.py", "--code-file", "/workspace/test_cases/solution.py", "--test-file", "/workspace/test_cases/test_solution.py"]
+    mem_limit: 512m
+    cpus: 1.0
+    network_mode: none

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Coder Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Coder Studio</h1>
+      <p class="subtitle">Local LLM-powered code assistant</p>
+    </header>
+
+    <main>
+      <label for="prompt">Describe your coding task</label>
+      <textarea id="prompt" rows="8" placeholder="e.g. Write a Python function to merge two sorted lists..."></textarea>
+
+      <div class="actions">
+        <button id="generate-btn" type="button">Generate Code</button>
+        <span id="status" class="status" aria-live="polite"></span>
+      </div>
+
+      <label for="output">Generated Output</label>
+      <pre id="output" class="output" aria-label="Generated code output"></pre>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
